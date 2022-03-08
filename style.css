@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --1: #000;
+  --2: #fff;
+}
+
+html {
+  transition: all 0.3s ease-in;
+}
+
+html.dark {
+  --1: #fff;
+  --2: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--1);
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.button {
+  position: absolute;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--1);
+  color: var(--2);
+  font-weight: 600;
+  top: 60px;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.hour {
+  position: absolute;
+  background-color: var(--1);
+  height: 50px;
+  width: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transform-origin: bottom center;
+}
+
+.min {
+  position: absolute;
+  background-color: var(--1);
+  height: 80px;
+  width: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transform-origin: bottom center;
+}
+
+.sec {
+  position: absolute;
+  background-color: rgb(204, 60, 96);
+  height: 80px;
+  width: 1.5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transform-origin: bottom center;
+}
+
+.dot {
+  position: absolute;
+  background-color: rgb(180, 64, 64);
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.time {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.date {
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
